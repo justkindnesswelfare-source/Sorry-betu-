@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Betu Rinku 🎀</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Trebuchet MS',sans-serif;
+  background:linear-gradient(160deg,#fff0f5,#ffe0eb,#fff7fb);
+  color:#77364f;overflow-x:hidden;
+}
+button{font-family:inherit;cursor:pointer}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.float{
+  position:absolute;bottom:-50px;animation:floatUp linear forwards;
+  opacity:.7;font-size:22px
+}
+@keyframes floatUp{
+  to{transform:translateY(-115vh) rotate(360deg);opacity:0}
+}
+main{position:relative;z-index:1}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:30px 18px;
+}
+.hero-card{
+  width:min(680px,100%);padding:40px 22px;
+  background:#ffffffb8;border:1px solid #fff;
+  border-radius:32px;box-shadow:0 15px 55px #bd547b20;
+  animation:appear 1.2s ease both;
+}
+@keyframes appear{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.bow{font-size:45px;animation:bounce 2s infinite}
+@keyframes bounce{50%{transform:translateY(-7px) rotate(5deg)}}
+h1{font-size:clamp(2.4rem,8vw,4.4rem);color:#d64f83;margin:12px 0}
+.subtitle{font-size:1.05rem;line-height:1.8}
+.pill{
+  display:inline-block;background:#ffe1ed;padding:9px 17px;border-radius:30px;
+  margin:14px 0;color:#bb3f72;font-size:.9rem
+}
+.primary,.secondary{
+  border:0;border-radius:30px;padding:14px 23px;margin:8px;
+  font-size:1rem;transition:.25s
+}
+.primary{background:#dc5b8b;color:white;box-shadow:0 7px 18px #dc5b8b40}
+.secondary{background:#fff;color:#c34979;border:1px solid #f5b4cd}
+.primary:hover,.secondary:hover{transform:translateY(-3px) scale(1.02)}
+section{padding:65px 18px;text-align:center}
+.section-title{font-size:clamp(1.8rem,6vw,2.7rem);color:#c74679;margin-bottom:13px}
+.intro{line-height:1.8;max-width:650px;margin:0 auto 25px}
+.container{width:min(900px,100%);margin:auto}
+.card{
+  background:#ffffffc9;border:1px solid #fff;border-radius:25px;
+  padding:25px 20px;box-shadow:0 10px 30px #b83b6b10;
+}
+.shayari-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));
+  gap:16px;margin-top:28px
+}
+.shayari{line-height:1.9;font-size:1.05rem}
+.shayari .emoji{font-size:27px;display:block;margin-bottom:10px}
+.letter{max-width:680px;margin:auto;text-align:left;line-height:2;font-size:1.03rem}
+.letter h3{text-align:center;color:#d34f82;margin-bottom:18px;font-size:1.5rem}
+.signature{text-align:right;margin-top:20px;color:#d34f82;font-weight:bold}
+.counter{font-size:1.1rem;margin:18px 0;color:#b63f70}
+.sorry-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+  gap:9px;margin:25px auto;max-height:450px;overflow:auto;padding:8px;
+  border-radius:20px;background:#fff6fa88
+}
+.sorry-item{
+  background:#fff;border:1px solid #ffd1e1;border-radius:14px;
+  padding:11px 5px;font-size:.91rem;
+  animation:pop .4s ease both;
+}
+@keyframes pop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+.note{
+  max-width:600px;margin:20px auto;padding:20px;border-radius:20px;
+  background:#fff8fb;line-height:1.9;border:1px dashed #efa4c0;
+}
+.big-sorry{font-size:clamp(1.7rem,6vw,2.8rem);color:#d34f82;margin:20px 0}
+.hidden{display:none}
+#reply{font-size:1.1rem;line-height:1.8;margin:22px auto;max-width:600px}
+footer{padding:35px 15px 45px;text-align:center;line-height:2;color:#a45c78}
+.small{font-size:.9rem;color:#a55d79}
+</style>
+</head>
+
+<body>
+<div id="hearts"></div>
+<main>
+
+<header class="hero" id="top">
+  <div class="hero-card">
+    <div class="bow">🎀</div>
+    <div class="pill">A little website, a big sorry 💌</div>
+    <h1>Rinku Betu 🥹</h1>
+    <p class="subtitle">
+      Pata hai tum gussa ho meri jaan...<br>
+      Bas ek baar meri baat sun lo na 🫶
+    </p>
+    <div class="big-sorry">Sorry betu 🎀🫶</div>
+    <p class="subtitle">
+      Tum mere liye bahut special ho.<br>
+      Tumhara gussa bhi apni jagah sahi ho sakta hai,<br>
+      bas mujhe apni galti sudharne ka mauka de do ❤️
+    </p>
+    <br>
+    <button class="primary" onclick="goTo('letter')">Meri baat sunogi? 💌</button>
+    <button class="secondary" onclick="goTo('sorry')">1000 Sorry dekho 🎀</button>
+  </div>
+</header>
+
+<section id="shayari">
+  <div class="container">
+    <h2 class="section-title">Meri Gusse Wali Jaan 💗</h2>
+    <p class="intro">Tumhe manane ke liye dil se kuch lines likhi hain, sirf tumhare liye Betu 🥺</p>
+
+    <div class="shayari-grid">
+      <div class="card shayari">
+        <span class="emoji">🌷</span>
+        Tum rooth jao to dil udaas ho jata hai,<br>
+        Tumhari khamoshi se sab suna ho jata hai.<br>
+        Galti meri hai to maan leta hoon,<br>
+        Tumhari muskurahat ke liye sau baar mana leta hoon. ❤️
+      </div>
+
+      <div class="card shayari">
+        <span class="emoji">🧸</span>
+        Chand bhi feeka lage tumhari muskaan ke aage,<br>
+        Phool bhi jhuk jaaye tumhari pehchaan ke aage.<br>
+        Gussa chhodna ya na chhodna tumhari marzi,<br>
+        Main sorry kehta hoon apne dil ki awaaz se. 🎀
+      </div>
+
+      <div class="card shayari">
+        <span class="emoji">🥹</span>
+        Teri hansi meri favourite kahani hai,<br>
+        Teri khushi meri dil ki nishani hai.<br>
+        Nahi chahta meri wajah se udaas raho,<br>
+        Bas chahta hoon tum apne dil ki baat kaho. 💕
+      </div>
+
+      <div class="card shayari">
+        <span class="emoji">💌</span>
+        Maafi ke lafzon se sab theek nahi hota,<br>
+        Main jaanta hoon sirf sorry se dil nahi bharta.<br>
+        Main apni galti ko samajhne ki koshish karunga,<br>
+        Aur tumhara bharosa jeetne ki bhi. 🫶
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="letter">
+  <div class="container">
+    <h2 class="section-title">Ek Chhota Sa Love Letter 💌</h2>
+    <div class="card letter">
+      <h3>My Rinku Betu 🎀</h3>
+      Meri pyaari si Rinku ❤️
+
+      Mujhe nahi pata tum abhi kitna gussa ho, par main itna jaanta hoon ki tum mere liye bahut important ho.
+
+      Agar meri kisi baat se tumhara dil dukha hai, to mujhe sach mein sorry betu. Main tumhari feelings ko ignore nahi karna chahta. Main chahta hoon ki tum jo feel kar rahi ho, main use samjhun aur apni galti sudharun.
+
+      Tumhe abhi time chahiye to main tumhe time dunga. Tum baat karna chaho to main sununga. Main tum par jaldi maaf karne ka pressure nahi daalunga.
+
+      Bas ek baat yaad rakhna — tumhari smile mere liye bahut precious hai, aur main chahta hoon ki meri wajah se nahi, mere saath tum khush raho. 🥹💗
+
+      <div class="signature">
+        Hamesha tumhara,<br>
+        RJ ❤️<br>
+        Sorry betu 🎀🫶
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sorry">
+  <div class="container">
+    <h2 class="section-title">1000 Baar Sorry Betu 🎀</h2>
+    <p class="intro">
+      Haan meri jaan, poore 1000 baar! Har ek ke saath thoda sa pyaar aur ek chhota sa bow 🥹
+    </p>
+
+    <div class="counter" id="counter">0 / 1000 Sorry 💗</div>
+    <button class="primary" onclick="showSorry()">Saare 1000 Sorry dikhao 🎀</button>
+    <button class="secondary" onclick="goTo('top')">Wapas upar 💕</button>
+    <div class="sorry-grid" id="sorryGrid">
+      <div class="sorry-item">Sorry betu 🎀🫶</div>
+    </div>
+    <p class="small">Har sorry ke saath ek virtual hug 🤗</p>
+  </div>
+</section>
+
+<section id="last">
+  <div class="container">
+    <h2 class="section-title">Ek Last Baat, Betu 🥺</h2>
+    <div class="card">
+      <div style="font-size:48px">🧸💗🎀</div>
+      <p class="intro" style="margin-top:18px">
+        Main chahta hoon tumhari baat samjhun, tumhari narazgi ki wajah jaanun
+        aur jo galat kiya hai use sudharun.
+        Tum mere liye special ho, Rinku. ❤️
+      </p>
+      <button class="primary" onclick="forgiveMessage()">Maaf kar do na betu 🥹</button>
+      <button class="secondary" onclick="needTime()">Mujhe thoda time chahiye 💗</button>
+      <div id="reply" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Made with love, only for Rinku 🎀<br>
+  <strong>RJ ❤️ RINKU</strong><br>
+  <span class="small">Sorry betu 🎀🫶 × 1000</span>
+</footer>
+</main>
+
+<script>
+function goTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+let sorryShown = false;
+
+function showSorry(){
+  if(sorryShown){
+    goTo('sorry');
+    return;
+  }
+  sorryShown = true;
+  const grid = document.getElementById('sorryGrid');
+  const counter = document.getElementById('counter');
+  grid.innerHTML = '';
+
+  for(let i=1; i<=1000; i++){
+    const item = document.createElement('div');
+    item.className = 'sorry-item';
+    item.textContent = i + '. Sorry betu 🎀🫶';
+    item.style.animationDelay = (i % 30) * 0.01 + 's';
+    grid.appendChild(item);
+  }
+  counter.textContent = '1000 / 1000 Sorry 💗';
+  grid.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function forgiveMessage(){
+  document.getElementById('reply').innerHTML =
+    '🥹💗 Ye website tumhe smile karane ke liye hai, Betu. Jab tum ready ho, tab hum pyaar se baat karenge. Tumhari feelings mere liye important hain. 🎀🫶';
+  makeHearts(20);
+}
+
+function needTime(){
+  document.getElementById('reply').innerHTML =
+    'Theek hai betu ❤️ Tum aaram se time lo. Main tumhari feelings ki respect karta hoon. Jab tum baat karna chaho, main sunne ke liye ready hoon. 🫶';
+  makeHearts(8);
+}
+
+function makeHearts(count){
+  const layer = document.getElementById('hearts');
+  for(let i=0;i<count;i++){
+    const el = document.createElement('span');
+    el.className = 'float';
+    el.textContent = ['💗','💕','🎀','🫶','🌷'][Math.floor(Math.random()*5)];
+    el.style.left = Math.random()*100 + 'vw';
+    el.style.animationDuration = (4+Math.random()*4) + 's';
+    el.style.fontSize = (18+Math.random()*20) + 'px';
+    layer.appendChild(el);
+    setTimeout(()=>el.remove(),8500);
+  }
+}
+
+setInterval(()=>makeHearts(2),1800);
+</script>
+</body>
+</html>
